@@ -1,0 +1,17 @@
+Methodology :
+Step-1: Data preparation - (Loaded both datasets, checked for missing values, cinverted unix timestamps to datetime)
+Step-2: Feature Programming - (Created daily trader level features: Performance Metrics(Daily Pnl, Win rate, Pnl volatility, profitable day)
+                                                                Behavioral Metrics(Total trades per day, average trade size, total traded volume, long-short-ratio)
+Step-3: Sentiment Based Analysis(Compared feared vs greed days across)(used Groupby analysis, Boxplots, Barcharts, segement level comparison)
+Step-4: Trader Segmentation(Segmented traders(High frequency vs low freaquency traders)Compared segment performance across sentiment regimes.)
+Step-5: Predictive Modeling - Built a Random Forest classifier to predict whther a trder will have a profitable day.
+
+Key Insights:
+1. Traders increase trade frequency during greed days.
+2. High frequency traders show higher volatility in Pnl.
+3. Win rate declines during greed despite high activity(over trading behaviour).
+
+Strategy recommendations:
+1. Reduce leverage exposure during fear periods for high frequency traders.
+2. Limit overtrading during greed periods.
+3. Allocate more capital to consistent traders during stable sentiment regimes.
